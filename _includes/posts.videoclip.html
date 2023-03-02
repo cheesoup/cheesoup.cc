@@ -1,0 +1,10 @@
+{% if include.width %}
+{% assign w = include.width %}
+{% else %}
+{% assign w = "100%" %}
+{% endif %}
+
+<video class="clip floater" width="{{ w }}" height="auto" onclick="playPause()" controls autoplay muted loop>
+    <source src="{{ include.src }}" type="video/webm">
+    Your browser does not support the video tag.
+</video>

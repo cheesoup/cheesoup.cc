@@ -1,0 +1,116 @@
+main {
+    div.summary {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 40px;        
+        & > * { margin: 0; }
+        
+        @include breakpt($mobile-width + 1, 100vw){
+            grid-template-columns: 1fr 2fr;            
+        }
+        
+        
+        div.title {
+            margin-bottom: 20px;            
+            & > * { margin: 0; }
+            
+            h1 {
+                line-height: 30px;
+                margin-bottom: 10px;
+                @include breakpt(0, $mobile-width) { padding: 0; }
+            }
+            
+            dl {
+                & > * { display: inline; }                
+                dt { @include txl1bold; }                
+                dd { margin: 0; }
+                
+                @include breakpt($mobile-width + 1, 100vw) {
+                    grid-column-start: 1;
+                    grid-row-start: 2;
+                }
+            }
+        }
+        
+        div.description {
+            @include breakpt($mobile-width + 1, 100vw) {
+                grid-column-start: 2;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+            
+            @include breakpt($widescreen-width + 1, 100vw) {
+                column-count: 2;
+                column-gap: 20px;
+            }            
+        }
+    }
+    
+    
+    p {
+        margin-bottom: 30px;        
+        &.gallery {
+            display: grid;
+            grid-gap: 30px;
+            
+            img {
+                position: relative;
+                margin: -1px;
+                max-width: 100%;
+                border: 1px #000 solid;
+                box-shadow: 5px 5px #b2b2b2;
+                cursor: pointer;
+
+                &:hover {
+                    top: 3px;
+                    left: 3px;
+                    box-shadow: 2px 2px #b2b2b2;
+                }
+            }
+            
+            &.double { grid-template-columns: 1fr 1fr; }
+        }
+    }
+}
+
+object#lightbox {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    
+    &.active {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    
+    img, video {
+        max-width: 95%;
+        max-height: 95%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+p.embed_container {
+    background-color: $color1;
+    position: relative;
+    padding-bottom: 56.25%;
+    
+    iframe {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

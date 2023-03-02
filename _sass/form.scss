@@ -1,0 +1,43 @@
+main {    
+    p, h1 { margin: 0 0 30px; }
+    h1 { @include breakpt(0, $mobile-width) { text-align: center; } }
+}
+
+form {
+    display: block;
+    max-width: $mobile-width - 20px;
+    margin: 20px auto;
+    
+    & > h1 {
+        display: block;
+        text-align: center;
+        margin: 0 0 40px;
+    }
+    
+    input, textarea, button {
+        @include txl2reg;
+        background-color: $color0;
+        border: 1px $color1 solid;
+        padding: 10px;
+    }
+    
+    input, textarea {
+        display: block;
+        width: calc(100% - 25px);
+        margin: 0 auto 10px;
+    }
+    
+    textarea {
+        height: 300px;
+    }
+    
+    button {
+        display: block;
+        width: 80px;
+        margin: 0 auto;
+    }
+    
+    div.form-group {
+        & > * { display: block; }
+    }
+}

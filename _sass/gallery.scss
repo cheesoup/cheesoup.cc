@@ -1,0 +1,27 @@
+/************/
+/* GALLERY */
+/************/
+
+main {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    
+    figure {
+        margin: 0;
+        
+        a {
+            display: block;
+            background-color: $color0;
+            /* object-fit: cover; */            
+            img { display: inherit; }
+        }
+
+        figcaption {
+            padding: 10px 2px 0 0;
+            & > * { margin: 0; }
+            h2 { @include txl1bold; }
+            p { @include txl2small; }
+        }
+    }
+}

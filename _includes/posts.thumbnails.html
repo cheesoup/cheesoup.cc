@@ -1,0 +1,7 @@
+{% assign sources = include.src | split: ',' %}
+
+<p class="gallery {{ include.style }}">
+    {% for source in sources %}
+    <img class="thumbnail" src="{{source}}" alt=""/>
+    {% endfor %}
+</p>

@@ -1,0 +1,9 @@
+pages:
+- title: Work
+  url: /index
+  
+- title: About
+  url: /about
+
+- title: Contact
+  url: /contact

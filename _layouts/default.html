@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>    
+        <title>Chris Carin | {{ page.title }}</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+        <meta http-equiv="Pragma" content="no-cache"/>
+        <meta http-equiv="Expires" content="0"/>
+        
+        {% if page.id %}
+        <link rel="stylesheet" href="{{ "/assets/post.css" | relative_url}}">
+        <script src="{{ "/assets/lightbox.js" | relative_url }}" async></script>
+        {% else %}
+        <link rel="stylesheet" href="{{ page.stylesheet | relative_url}}">
+        {% endif %}
+	</head>
+	<body>
+        {% if page.showbanner == true %} 
+		<header>
+			<img src="{{ "/assets/layout/images/header.gif" | relative_url }}" alt="chris carin" height="48px" width="320px"/>
+            <nav>
+                {% for item in site.data.navi.pages %}
+                <a class="floater" href="{{ item.url }}">{{ item.title }}</a>
+                {% endfor %}
+            </nav>
+		</header>
+        {% else %}
+        <nav>
+            {% for item in site.data.navi.pages %}
+            <a class="floater" href="{{ item.url }}">{{ item.title }}</a>
+            {% endfor %}
+        </nav>
+        {% endif %}
+        
+        {{ content }}            
+
+        {% if page.showfooter == true %} 
+        <footer class="showbanner">
+            <p>This site is powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://pages.github.com/">Github Pages</a>.</p>
+        </footer>
+        {% endif %}
+	</body>
+</html>
+

@@ -1,0 +1,200 @@
+$color0: #FFF;
+$color1: #000;
+$color2: #b2b2b2;
+
+$small-width: 480px;
+$mobile-width: 640px;
+$tablet-width: 800px;
+$desktop-width: 1024px;
+$widescreen-width: 1280px;
+
+@font-face {
+    font-family: 'ToshibaTxL1_8x16';
+    src: url('layout/webfonts/Web437_ToshibaTxL1_8x16.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'ToshibaTxL2_8x16';
+    src: url('layout/webfonts/Web437_ToshibaTxL2_8x16.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'ToshibaTxL2_8x8';
+    src: url('layout/webfonts/Web437_ToshibaTxL2_8x8.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'DOS-V_re_JPN16';
+    src: url('layout/webfonts/Web437_DOS-V_re_JPN16.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'DOS-V_re_JPN19';
+    src: url('layout/webfonts/Web437_DOS-V_re_JPN19.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'DOS-V_re_JPN24';
+    src: url('layout/webfonts/Web437_DOS-V_re_JPN24.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'DOS-V_re_JPN30';
+    src: url('layout/webfonts/Web437_DOS-V_re_JPN30.woff') format('woff');
+}
+
+@mixin breakpt ($min, $max) {
+    @media (min-width: #{$min}) and (max-width: #{$max}) {
+        @content;
+    }
+}
+
+@mixin txl1bold() {
+    font-family: 'ToshibaTxL1_8x16';
+    font-size: 16px;
+    font-weight: normal;
+    @content;
+}
+
+@mixin txl2small() {
+	font-family: 'ToshibaTxL2_8x8';
+    font-size: 8px;
+    @content;
+}
+
+@mixin txl2reg() {
+	font-family: 'ToshibaTxL2_8x16';
+	font-size: 16px;
+    @content;
+}
+
+@mixin dosvre16() {
+    font-family: 'DOS-V_re_JPN16';
+    font-weight: normal;
+    font-size: 16px;
+}
+
+@mixin dosvre19() {
+    font-family: 'DOS-V_re_JPN19';
+    font-weight: normal;
+    font-size: 19px;
+}
+
+@mixin dosvre24() {
+    font-family: 'DOS-V_re_JPN24';
+    font-weight: normal;
+    font-size: 24px;
+}
+
+@mixin dosvre30() {
+    font-family: 'DOS-V_re_JPN30';
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+@keyframes blinker { 50% { opacity: 0; } }
+@keyframes fade_in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+html {
+    scrollbar-width: none;
+}
+
+body {
+	width: 100%;    
+    background-color: $color0;
+	margin: 0 auto;
+    
+    @include txl2reg;
+	line-height: 24px;
+    
+    -ms-overflow-style: none;  /* IE and Edge */
+    
+    @include breakpt($small-width + 1, $mobile-width) { max-width: $small-width; }
+    @include breakpt($mobile-width + 1, $tablet-width) { max-width: $mobile-width; }
+    @include breakpt($tablet-width + 1, $desktop-width) { max-width: $tablet-width; }
+    @include breakpt($desktop-width + 1, $widescreen-width) { max-width: $desktop-width; }
+    @include breakpt($widescreen-width + 1, 100vw) { max-width: $widescreen-width; }
+    
+    & > * { margin: 40px 10px 0; }
+    
+    & > header {
+        text-align: center;
+        @include breakpt(0, $small-width) { margin: 40px 0 0; }
+        nav { margin-top: 5px; }
+    }
+    
+    & > nav {
+        @include txl2small;
+        @include breakpt(0, $mobile-width) { text-align: center; }
+    }
+    
+    &::-webkit-scrollbar { display: none; }
+}
+
+a {
+    color: #797979;
+    &:hover { text-decoration: none; }
+}
+
+h1 { @include dosvre30; }
+
+h2, b, strong { @include txl1bold; }
+
+.centered { text-align: center;}
+
+.floater, button {
+    border: 1px $color1 solid;
+    box-shadow: 4px 4px #b2b2b2;
+}
+
+a.floater, button {
+    position: relative;    
+    &:hover {
+        left: 2px;
+        top: 2px;
+        box-shadow: 2px 2px $color2;
+    }    
+}
+
+video.clip {
+    display: block;
+    pointer-events: none;
+}
+
+nav a {
+    display: inline-block;
+    width: 80px;
+    padding: 4px;
+    margin: 0 5px;
+
+    color: $color1;
+    text-align: center;
+    text-decoration: none;
+
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
+}
+
+footer {
+    margin-bottom: 40px;
+    @include txl2small;
+    text-align: center;
+}
+
+main {
+    animation: fade_in ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    margin-bottom: 40px;
+    
+    font-smooth: never;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: none;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.125);
+    text-rendering: optimizeLegibility
+}

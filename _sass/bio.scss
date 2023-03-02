@@ -1,0 +1,31 @@
+main {
+    @include breakpt($mobile-width + 1, 100vw ) { 
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 40px;
+    }
+    
+    p, h1 { margin: 0 0 40px; }
+    h2 { margin: 0 0 10px; }
+    
+    h1 { @include breakpt(0, $mobile-width) { text-align: center; } }
+    
+    figure {
+        margin: 0;
+        
+        figcaption { @include txl2small; }
+        
+        video {
+            margin: 0;
+            width: 100%;
+            @include breakpt(0, $mobile-width) {
+                display: block;
+                margin: 0 auto;
+            }
+        }        
+    }
+    
+    span.cursor {
+        animation: blinker 1s step-start 0s infinite;
+    }
+}
