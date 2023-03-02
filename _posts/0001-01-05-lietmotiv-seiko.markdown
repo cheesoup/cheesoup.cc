@@ -5,7 +5,7 @@ thumbnail: /assets/posts/lietmotiv_seiko/thumbnail0.jpg
 tags: Motion, Animation
 tools: After Effects
 
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non congue orci. Ut non mi massa. Phasellus laoreet sapien est, et malesuada odio cursus quis. Maecenas id turpis eleifend, facilisis mi id, ullamcorper sapien. Duis ut ex finibus, congue risus in, fermentum justo. In malesuada est nec ex gravida, ac iaculis lorem condimentum. Nunc pulvinar velit urna, ut commodo est sollicitudin et. Maecenas sit amet turpis volutpat, aliquam ex et, commodo sapien.
+description: Leitmotivs, as made famous by Richard Wagner, are musical cues which are used to identify a specific character or themes throughout a narrative. Oftentimes, leitmotivs are transformed throughout a given work to reflect the status of the character or theme they represent. They are often merged with other leitmotivs as a means of representing character interaction. For this project, I was tasked with creating a one and half minute motion graphic which could represent this idea of leitmotivs. I chose to create an animated music video for Yasuaki Shimizu’s ‘Seiko 3’. The goal I had in mind was to visually represent the song’s development and the evolution of its primary motif over time through use of illustrated flora. Unfortunately due to copyright, I cannot upload this piece with audio without the risk of strike. I apologize.
 
 categories: work
 ---
