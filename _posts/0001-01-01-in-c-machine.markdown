@@ -5,7 +5,7 @@ thumbnail: /assets/posts/in_c/thumbnail.png
 tags: Motion, Web Design/Development, Sound Design, Interactive Installation
 tools: Bela/C++, HTML5/CSS3, NodeJS, Various JavaScript libraries
 
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non congue orci. Ut non mi massa. Phasellus laoreet sapien est, et malesuada odio cursus quis. Maecenas id turpis eleifend, facilisis mi id, ullamcorper sapien. Duis ut ex finibus, congue risus in, fermentum justo. In malesuada est nec ex gravida, ac iaculis lorem condimentum. Nunc pulvinar velit urna, ut commodo est sollicitudin et. Maecenas sit amet turpis volutpat, aliquam ex et, commodo sapien.
+description: The In C Machine is a local area network based web application that I am currently developing for my own leisure. It was originally planned for OCADU’s GradEX. It is based around Terry Riley’s minimalist composition/musical game ‘In C’, a classical piece in which an arbitrary number of players play through 53 looping phrases. After each repetition of a phrase, a player can decide whether they want to move onto the next phrase or stay on the current phrase and loop again. This results in huge wash harmony that all revolves around the tonal center of C. My goal for this project is to create a machine which would allow non-musicians to connect and play through this musical game together. To accomplish this, I built an entire web application from the ground up using a Bela which acted as a multi voice synthesizer and sequencer built specifically to play Terry Riley’s In C. Users could then access this backend by connecting to a WIFI router and going to a specified address in their browser. Currently, I’m trying to migrate this project onto better hardware.
 
 categories: work
 ---

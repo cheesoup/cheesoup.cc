@@ -5,7 +5,7 @@ thumbnail: /assets/posts/flow/thumbnail.png
 tags: Motion, Web Design/Development
 tools: HTML5, CSS, JavaScript
 
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non congue orci. Ut non mi massa. Phasellus laoreet sapien est, et malesuada odio cursus quis. Maecenas id turpis eleifend, facilisis mi id, ullamcorper sapien. Duis ut ex finibus, congue risus in, fermentum justo. In malesuada est nec ex gravida, ac iaculis lorem condimentum. Nunc pulvinar velit urna, ut commodo est sollicitudin et. Maecenas sit amet turpis volutpat, aliquam ex et, commodo sapien.
+description: Flow is an audio/visual demo built entirely in HTML5/CSS and JavaScript. The requirement for this project was to simply create something using a JavaScript library. At the time, all I wanted to do was write music. Ultimately, I decided to twist this assignment into what I actually wanted to do, and thus flow was born. It makes use of ToneJS for the audio and P5JS for the visuals.
 
 categories: work
 ---
