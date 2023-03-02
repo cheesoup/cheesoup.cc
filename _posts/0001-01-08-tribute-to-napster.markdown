@@ -10,6 +10,8 @@ description: "For this project, I was tasked to create a triptych representing a
 categories: work
 ---
 
+
+
 {% capture images %}
 /assets/posts/tribute_to_napster/photo0.jpg,
 /assets/posts/tribute_to_napster/photo1.jpg

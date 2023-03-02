@@ -5,11 +5,10 @@ thumbnail: /assets/posts/leitmotiv_2d/thumbnail.jpg
 tags: Print, Publication
 tools: InDesign, Illustrator
 
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non congue orci. Ut non mi massa. Phasellus laoreet sapien est, et malesuada odio cursus quis. Maecenas id turpis eleifend, facilisis mi id, ullamcorper sapien. Duis ut ex finibus, congue risus in, fermentum justo. In malesuada est nec ex gravida, ac iaculis lorem condimentum. Nunc pulvinar velit urna, ut commodo est sollicitudin et. Maecenas sit amet turpis volutpat, aliquam ex et, commodo sapien.
+description: Leitmotivs are essentially small musical phrases which composers use to represent a concept. They were originally used in German as a means of communicating story through music. To capture this concept in print form, I put together an accordion fold which was essentially a visual score to my (unhealthy) creative process at the time. The idea was to use simple shapes that I could easily transform throughout the course of a book. Through the transformation of these shapes, I hoped to convey a narrative about my stress and anxiety levels when working on a project (despite the bright colors and simple shapes).
 
 categories: work
 ---
-
 
 {% include posts.thumbnails.html alt="Leitmotiv Thumbnail" src="/assets/posts/leitmotiv_2d/thumbnail.jpg" %}
 
