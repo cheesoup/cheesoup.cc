@@ -10,7 +10,7 @@ description: The In C Machine is a local area network based web application that
 categories: work
 ---
 
-{% include posts.videoclip.html alt="Leitmotiv Thumbnail" src="/assets/posts/in_c/in_c_cut_edit.webm" %}
+{% include posts.videogallery.html alt="Leitmotiv Thumbnail" src="/assets/posts/in_c/in_c_cut_edit.webm" %}
 
 {% capture images %}
 /assets/posts/in_c/photo0.jpg,
