@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A Tribute to House Music"
-thumbnail: /assets/posts/tribute_to_house_music/thumbnail.png
+thumbnail: /assets/posts/tribute_to_house_music/thumbnail.jpg
 tags: Print, Poster, Publication
 tools: InDesign
 
@@ -10,13 +10,13 @@ description: This project was primarily inspired by Midtown 180 Blues, an album 
 categories: work
 ---
 
-{% include posts.thumbnails.html alt="Leitmotiv Thumbnail" src="/assets/posts/tribute_to_house_music/thumbnail.png" %}
+{% include posts.thumbnails.html alt="Leitmotiv Thumbnail" src="/assets/posts/tribute_to_house_music/thumbnail.jpg" %}
 
 {% capture images %}
-/assets/posts/tribute_to_house_music/booklet1.png,
-/assets/posts/tribute_to_house_music/booklet3.png,
-/assets/posts/tribute_to_house_music/booklet4.png,
-/assets/posts/tribute_to_house_music/booklet5.png
+/assets/posts/tribute_to_house_music/booklet0.jpg,
+/assets/posts/tribute_to_house_music/booklet1.jpg,
+/assets/posts/tribute_to_house_music/booklet3.jpg,
+/assets/posts/tribute_to_house_music/booklet5.jpg
 {% endcapture %}
 
 {% include posts.thumbnails.html alt="Leitmotiv Thumbnail" src=images style="double" %}

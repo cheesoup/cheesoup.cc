@@ -12,12 +12,13 @@ categories: work
 
 {% include posts.thumbnails.html alt="Leitmotiv Thumbnail" src="/assets/posts/leitmotiv_2d/thumbnail.jpg" %}
 
+{% include posts.thumbnails.html alt="Leitmotiv Thumbnail" src="/assets/posts/leitmotiv_2d/score0.png" %}
+{% include posts.thumbnails.html alt="Leitmotiv Thumbnail" src="/assets/posts/leitmotiv_2d/score1.png" %}
+
 {% capture images %}
 /assets/posts/leitmotiv_2d/photo0.jpg,
 /assets/posts/leitmotiv_2d/photo2.jpg
 {% endcapture %}
-
 {% include posts.thumbnails.html alt="Leitmotiv Thumbnail" src=images style="double" %}
-
 
 {% include posts.thumbnails.html alt="Leitmotiv Thumbnail" src="/assets/posts/leitmotiv_2d/photo3.jpg" %}

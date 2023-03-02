@@ -196,5 +196,27 @@ main {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: none;
     text-shadow: 1px 1px 0px rgba(0,0,0,0.125);
-    text-rendering: optimizeLegibility
+    text-rendering: optimizeLegibility;
+        
+    a.floater.link {
+        max-width: 50%;
+        display: block;
+        padding: 10px;
+        margin: 0 auto;
+        color: $color1;
+        text-decoration: none;
+        text-align: center;
+        @include txl1bold;
+    }
+        
+    ul {
+        margin-top: 0;
+    }
+}
+
+section {
+    margin-bottom: 20px;
+    p:last-child {
+        margin: 0;
+    }
 }

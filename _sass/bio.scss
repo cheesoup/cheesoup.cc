@@ -8,7 +8,11 @@ main {
     p, h1 { margin: 0 0 40px; }
     h2 { margin: 0 0 10px; }
     
-    h1 { @include breakpt(0, $mobile-width) { text-align: center; } }
+    h1 {
+        @include breakpt(0, $mobile-width) {
+            text-align: center;
+        }
+    }
     
     figure {
         margin: 0;
@@ -25,7 +29,18 @@ main {
         }        
     }
     
-    span.cursor {
+    span.cursorside {
         animation: blinker 1s step-start 0s infinite;
+        @include breakpt(0, $mobile-width) {
+            display: none;
+        }
+    }
+    
+    span.cursordown {
+        animation: blinker 1s step-start 0s infinite;
+        display: none;
+        @include breakpt(0, $mobile-width) {
+            display: inline;
+        }
     }
 }

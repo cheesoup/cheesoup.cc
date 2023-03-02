@@ -10,4 +10,5 @@ description: Flow is an audio/visual demo built entirely in HTML5/CSS and JavaSc
 categories: work
 ---
 
-{% include posts.videoclip.html src="/assets/posts/flow/flow_edit_crop.webm" %}
+{% include posts.videogallery.html src="/assets/posts/flow/flow_edit_crop.webm" %}
+{% include posts.floater.html url="https://cheesoup.github.io/flow" text="Click here for the live version" %}
