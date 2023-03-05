@@ -19,6 +19,7 @@ The Lazy Virus Show is a fictional television cartoon about an anthropomorphic V
 /assets/posts/lazy_virus/screencap3.png
 {% endcapture %}
 
+{% include posts.header.html description=desc %}
 {% include posts.vimeo.html id="447308843" %}
 {% include posts.thumbnails.html
 alt="Lazy Virus Screenshots" style="double" ratio="sixteennine" src=images %}
