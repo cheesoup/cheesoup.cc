@@ -23,6 +23,6 @@ webm="/assets/posts/in_c/in_c_cut_edit.webm"
 mp4="/assets/posts/in_c/in_c_cut_edit.mp4"
 ratio="sixteennine" %}
 {% include posts.thumbnails.html
-alt="In C Machine" src=images style="double" ratio="sixteennine" %}
+alt="In C Machine" src=images style="double" %}
 {% include posts.thumbnails.html
 alt="In C Machine" src="/assets/posts/in_c/photo2.jpg" ratio="sixteennine" %}
