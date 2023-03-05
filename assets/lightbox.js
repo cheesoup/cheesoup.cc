@@ -15,20 +15,22 @@ slides.forEach(slide => {
 
 const clips = document.querySelectorAll("video.clip")
 clips.forEach(clip => {
-    const anchor = clip.parentNode    
-    anchor.addEventListener('click', e => {
-        const video = document.createElement('video')
-        const source = document.createElement('source')  
-        
-        lightbox.classList.add('active')      
-        video.controls = true;
-        video.autoplay = true;        
-        source.src = clip.firstElementChild.src
-        source.type  = "video/webm"
-        
-        video.appendChild(source)
-        lightbox.appendChild(video)        
-    })
+    if(/Android|iPhone/i.test(navigator.userAgent) == false) {
+        const anchor = clip.parentNode    
+        anchor.addEventListener('click', e => {
+            const video = document.createElement('video')
+            const source = document.createElement('source')  
+
+            lightbox.classList.add('active')      
+            video.controls = true;
+            video.autoplay = true;        
+            source.src = clip.firstElementChild.src
+            source.type  = "video/webm"
+
+            video.appendChild(source)
+            lightbox.appendChild(video)        
+        })
+    }
 })
 
 lightbox.addEventListener('click', e => {

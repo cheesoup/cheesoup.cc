@@ -1,11 +1,13 @@
 <p class="embed_container floater">
-  <iframe
-      src="https://player.vimeo.com/video/{{ include.id }}"
-      width="720px"
-      height="480px"
-      frameborder="0"
-      webkitallowfullscreen
-      mozallowfullscreen
-      allowfullscreen>
-  </iframe>
+    <iframe
+        src="https://player.vimeo.com/video/{{ include.id }}"
+        width="720px"
+        height="480px"
+        frameborder="0"
+        loading="lazy"
+
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen>
+    </iframe>
 </p>

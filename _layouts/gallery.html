@@ -8,12 +8,14 @@ layout: default
     {%- if site.posts.size > 0 -%}
     {%- for post in site.posts -%}
     <figure>
-        <a href="{{ post.url }}" class="floater"><img src="{{ post.thumbnail }}" width="100%"/></a>
+        <a href="{{ post.url }}" class="floater">
+            <img class="sixteennine" alt="{{ post.title | escape }}" src="{{ post.thumbnail }}" width="100%" loading="lazy"/>
+        </a>
         <figcaption>
             <h2>{{ post.title | escape }}</h2>
             <p>
                 {% for tag in post.tags %}
-                  {{ tag | replace:'-', ' ' }}
+                {{ tag | replace:'-', ' ' }}
                 {% endfor %}
             </p>
         </figcaption>

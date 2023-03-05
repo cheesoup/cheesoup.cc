@@ -1,17 +1,25 @@
-{% if include.width %}
-{% assign w = include.width %}
-{% else %}
-{% assign w = "100%" %}
-{% endif %}
-
-{% assign sources = include.src | split: ',' %}
-
 <p class="gallery {{ include.style }}">    
-    {% for source in sources %}
+    {% for clip in include.clips %}
     <a class="floater">
-        <video class="clip" width="{{ w }}" height="auto" onclick="playPause()" controls autoplay muted loop>
-            <source src="{{ source }}" type="video/webm">
-            Your browser does not support the video tag.
+        <video
+            class="clip lazy {{ include.ratio }}"
+            width="100%"
+            preload="none"
+            playsinline loop muted>
+            
+            {% for src in clip %}   
+            {% if src.["webm"] %}
+            <source data-src="{{ src.["webm"] }}#t=0.1" type="video/webm"/>
+            {% endif %}
+            {% if src.["mp4"] %}
+            <source data-src="{{ src.["mp4"] }}#t=0.1" type="video/mp4"/>
+            {% endif %}
+            {% if src.["ogg"] %}
+            <source data-src="{{ src.["ogg"] }}#t=0.1" type="video/ogg"/>
+            {% endif %}            
+            {% endfor %}
+            
+            Your browser does not support the video tag.            
         </video>  
     </a>
     {% endfor %}

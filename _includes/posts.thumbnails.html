@@ -2,6 +2,6 @@
 
 <p class="gallery {{ include.style }}">
     {% for source in sources %}
-    <img class="thumbnail" src="{{source}}" alt=""/>
+    <img class="thumbnail {{ include.ratio }}" src="{{ source }}" alt="" loading="lazy"/>
     {% endfor %}
 </p>

@@ -99,21 +99,65 @@ $widescreen-width: 1280px;
     100% { opacity: 1; }
 }
 
+.centered { text-align: center;}
 
-html {
-    scrollbar-width: none;
+.square { aspect-ratio: 1; }
+
+.fourthree { aspect-ratio: 4 / 3; }
+
+.sixteennine { aspect-ratio: 16 / 9; }
+
+.floater, button {
+    border: 1px $color1 solid;
+    box-shadow: 4px 4px #b2b2b2;
 }
+
+a {
+    color: #797979;
+    &:hover { text-decoration: none; }
+}
+
+a.floater, button {
+    position: relative;
+    cursor: pointer;
+    
+    &:hover {
+        left: 2px;
+        top: 2px;
+        box-shadow: 2px 2px $color2;
+    }    
+}
+        
+a.floater.link {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    
+    color: $color1;
+    text-decoration: none;
+    text-align: center;
+    @include txl1bold;
+}
+
+h1 { @include dosvre30; }
+
+h2, b, strong { @include txl1bold; }
+
+video.clip {
+    display: block;
+}
+
+html { scrollbar-width: none; }
 
 body {
 	width: 100%;    
     background-color: $color0;
-	margin: 0 auto;
-    
-    @include txl2reg;
-	line-height: 24px;
-    
+	margin: 0 auto 40px;    
+	line-height: 24px;    
     -ms-overflow-style: none;  /* IE and Edge */
     
+    @include txl2reg;
     @include breakpt($small-width + 1, $mobile-width) { max-width: $small-width; }
     @include breakpt($mobile-width + 1, $tablet-width) { max-width: $mobile-width; }
     @include breakpt($tablet-width + 1, $desktop-width) { max-width: $tablet-width; }
@@ -131,39 +175,7 @@ body {
     & > nav {
         @include txl2small;
         @include breakpt(0, $mobile-width) { text-align: center; }
-    }
-    
-    &::-webkit-scrollbar { display: none; }
-}
-
-a {
-    color: #797979;
-    &:hover { text-decoration: none; }
-}
-
-h1 { @include dosvre30; }
-
-h2, b, strong { @include txl1bold; }
-
-.centered { text-align: center;}
-
-.floater, button {
-    border: 1px $color1 solid;
-    box-shadow: 4px 4px #b2b2b2;
-}
-
-a.floater, button {
-    position: relative;    
-    &:hover {
-        left: 2px;
-        top: 2px;
-        box-shadow: 2px 2px $color2;
     }    
-}
-
-video.clip {
-    display: block;
-    pointer-events: none;
 }
 
 nav a {
@@ -180,12 +192,6 @@ nav a {
     &:last-child { margin-right: 0; }
 }
 
-footer {
-    margin-bottom: 40px;
-    @include txl2small;
-    text-align: center;
-}
-
 main {
     animation: fade_in ease 1s;
     animation-iteration-count: 1;
@@ -198,25 +204,16 @@ main {
     text-shadow: 1px 1px 0px rgba(0,0,0,0.125);
     text-rendering: optimizeLegibility;
         
-    a.floater.link {
-        max-width: 50%;
-        display: block;
-        padding: 10px;
-        margin: 0 auto;
-        color: $color1;
-        text-decoration: none;
-        text-align: center;
-        @include txl1bold;
-    }
-        
-    ul {
-        margin-top: 0;
-    }
+    ul { margin-top: 0; }
 }
 
 section {
     margin-bottom: 20px;
-    p:last-child {
-        margin: 0;
-    }
+    p:last-child { margin: 0; }
+}
+
+footer {
+    margin-bottom: 40px;
+    @include txl2small;
+    text-align: center;
 }

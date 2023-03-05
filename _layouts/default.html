@@ -10,6 +10,8 @@
         
         {% if page.id %}
         <link rel="stylesheet" href="{{ "/assets/post.css" | relative_url}}">
+        <script src="{{ "/assets/browsercheck.js" | relative_url }}"></script>
+        <script src="{{ "/assets/lazyvideo.js" | relative_url }}"></script>
         <script src="{{ "/assets/lightbox.js" | relative_url }}" async></script>
         {% else %}
         <link rel="stylesheet" href="{{ page.stylesheet | relative_url}}">

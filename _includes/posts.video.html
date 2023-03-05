@@ -1,0 +1,22 @@
+<p class="gallery {{ include.style }}">
+    <a class="floater">
+        <video
+            class="clip lazy {{ include.ratio }}"
+            width="100%"
+            preload="none"
+            playsinline loop muted>
+            
+            {% if include.webm %}
+            <source data-src="{{ include.webm }}#t=0.1" type="video/webm"/>
+            {% endif %}
+            {% if include.mp4 %}
+            <source data-src="{{ include.mp4 }}#t=0.1" type="video/mp4"/>
+            {% endif %}
+            {% if include.ogg %}
+            <source data-src="{{ include.ogg }}#t=0.1" type="video/ogg"/>
+            {% endif %}
+            
+            Your browser does not support the video tag.            
+        </video>
+    </a>
+</p>
